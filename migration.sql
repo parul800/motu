@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  insta TEXT NOT NULL UNIQUE,
+  pass_hash TEXT NOT NULL,
+  reset_token TEXT,
+  reset_expiry INTEGER,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
